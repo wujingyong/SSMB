@@ -4,6 +4,7 @@ import com.wjy.mybatis.entity.Department;
 import com.wjy.mybatis.entity.DepartmentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.cache.annotation.Cacheable;
 
 public interface DepartmentMapper {
     long countByExample(DepartmentExample example);
@@ -16,6 +17,7 @@ public interface DepartmentMapper {
 
     int insertSelective(Department record);
 
+    @Cacheable("departmentCache")
     List<Department> selectByExample(DepartmentExample example);
 
     Department selectByPrimaryKey(Integer deptId);

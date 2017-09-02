@@ -14,6 +14,16 @@
    diskExpiryThreadIntervalSeconds="120"
    memoryStoreEvictionPolicy="LRU">
  </defaultCache>
+ 
+ <cache name="reserveTimeCache"    
+        maxElementsInMemory="3000"   
+        maxElementsOnDisk="10000000" 
+        eternal="false"  
+        overflowToDisk="true"  
+        timeToIdleSeconds="120"    
+        timeToLiveSeconds="120"   
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LRU"/>  
 </ehcache>
  
 <!-- 
