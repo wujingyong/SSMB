@@ -109,6 +109,23 @@
 
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<package.enviroment></package.enviroment>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<package.enviroment>test</package.enviroment>
+			</properties>
+		</profile>
+	</profiles>
 	<build>
 		<resources>
 			<resource>
